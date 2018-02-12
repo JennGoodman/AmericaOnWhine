@@ -1,15 +1,20 @@
 package com.revature.americaonwine.beans;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="aow_subtype")
+@Table(name = "aow_subtype")
 public class SubType {
 
-
 	@Id
-	@SequenceGenerator(name="subtypeGen", sequenceName="aow_subtype_seq", allocationSize=1)
-	@GeneratedValue(generator="subtypeGen", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name = "subtypeGen", sequenceName = "aow_subtype_seq", allocationSize = 1)
+	@GeneratedValue(generator = "subtypeGen", strategy = GenerationType.SEQUENCE)
 	private int id;
 	@Column
 	private String subType;

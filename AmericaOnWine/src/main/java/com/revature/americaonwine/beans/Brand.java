@@ -1,14 +1,20 @@
 package com.revature.americaonwine.beans;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="aow_brand")
+@Table(name = "aow_brand")
 public class Brand {
 
 	@Id
-	@SequenceGenerator(name="brandGen", sequenceName="aow_brand_seq", allocationSize=1)
-	@GeneratedValue(generator="brandGen", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name = "brandGen", sequenceName = "aow_brand_seq", allocationSize = 1)
+	@GeneratedValue(generator = "brandGen", strategy = GenerationType.SEQUENCE)
 	private int id;
 	@Column
 	private String brand;

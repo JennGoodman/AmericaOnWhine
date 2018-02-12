@@ -1,7 +1,6 @@
 import { User } from './User';
 import { Brand } from './Brand';
 import { Country } from './Country';
-import { Type } from './Type';
 import { SubType } from './SubType';
 
 export class Inventory {
@@ -10,11 +9,11 @@ export class Inventory {
     brand: Brand;
     user: User;
     country: Country;
-    type: Type;
     sub_type: SubType;
     volume: number;
     year: number;
     price: number;
+    quantity: number;
     submitted: Date;
     description: string;
     imageUrl: string;
@@ -25,11 +24,11 @@ export class Inventory {
       this.brand = null;
       this.user = null;
       this.country = null;
-      this.type = null;
       this.sub_type = null;
       this.volume = null;
       this.year = null;
       this.price = null;
+      this.quantity = null;
       this.submitted = null;
       this.description = null;
       this.imageUrl = null;

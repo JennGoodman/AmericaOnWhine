@@ -1,14 +1,20 @@
 package com.revature.americaonwine.beans;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="aow_type")
+@Table(name = "aow_type")
 public class Type {
 
 	@Id
-	@SequenceGenerator(name="typeGen", sequenceName="aow_type_seq", allocationSize=1)
-	@GeneratedValue(generator="typeGen", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name = "typeGen", sequenceName = "aow_type_seq", allocationSize = 1)
+	@GeneratedValue(generator = "typeGen", strategy = GenerationType.SEQUENCE)
 	private int id;
 	@Column
 	private String type;

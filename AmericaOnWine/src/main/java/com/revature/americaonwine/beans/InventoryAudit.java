@@ -2,15 +2,21 @@ package com.revature.americaonwine.beans;
 
 import java.time.LocalDate;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="aow_inventory_audit")
+@Table(name = "aow_inventory_audit")
 public class InventoryAudit {
 
 	@Id
-	@SequenceGenerator(name="inventory_auditGen", sequenceName="aow_inventory_audit_seq", allocationSize=1)
-	@GeneratedValue(generator="inventory_auditGen", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name = "inventory_auditGen", sequenceName = "aow_inventory_audit_seq", allocationSize = 1)
+	@GeneratedValue(generator = "inventory_auditGen", strategy = GenerationType.SEQUENCE)
 	private int id;
 	@Column
 	private int old_id;
